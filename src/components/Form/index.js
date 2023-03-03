@@ -49,7 +49,7 @@ function validationImc(){
         />
         <Button 
           onPress={() => validationImc()}
-          title="Calcular IMC"
+          title={textButton}
         />
       </View>
       <ResultImc messageResultImc={messageImc} resultImc={imc}/>
