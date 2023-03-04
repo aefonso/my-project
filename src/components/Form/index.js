@@ -5,6 +5,8 @@ import {
   Text, 
   TouchableOpacity,
   Vibration,
+  Pressable,
+  Keyboard,
 } from 'react-native';
 import ResultImc from "./ResultImc";
 import styles from "./style";
@@ -47,9 +49,8 @@ function validationImc(){
   
 }
   return(
-    <View style={styles.formContext}>
+    <Pressable onPress={Keyboard.dismiss} style={styles.formContext}>
       <View style={styles.form}>
-
         <Text style={styles.formLabel}>Altura</Text>
         <Text style={styles.errorMessage}>{errorMessage}</Text>
         <TextInput
@@ -79,6 +80,6 @@ function validationImc(){
       </TouchableOpacity>
       </View>
       <ResultImc messageResultImc={messageImc} resultImc={imc}/>
-    </View>
+    </Pressable>
   );
 }
