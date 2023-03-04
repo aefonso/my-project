@@ -50,8 +50,9 @@ function validationImc(){
   }
 }
   return(
-    <Pressable onPress={Keyboard.dismiss} style={styles.formContext}>
-      <View style={styles.form}>
+      <View style={styles.formContext}>
+        {imc == null ? 
+      <Pressable onPress={Keyboard.dismiss} style={styles.form}>
         <Text style={styles.formLabel}>Altura</Text>
         <Text style={styles.errorMessage}>{errorMessage}</Text>
         <TextInput
@@ -79,8 +80,20 @@ function validationImc(){
       >
         <Text style={styles.textCalculator}>{textButton}</Text>
       </TouchableOpacity>
-      </View>
+      </Pressable>
+      :
+      <View style={styles.exibitionResultImc}>
       <ResultImc messageResultImc={messageImc} resultImc={imc}/>
-    </Pressable>
+      <TouchableOpacity
+      style={styles.ButtonCalculator}
+      onPress={() => {
+        validationImc()
+      }}
+      >
+        <Text style={styles.textCalculator}>{textButton}</Text>
+      </TouchableOpacity>
+      </View>
+    }
+    </View>
   );
 }
