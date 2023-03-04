@@ -41,13 +41,13 @@ function validationImc(){
     setMessageImc("Seu imc é igual:")
     setTextButton("Calcular Novamente")
     setErrorMessage(null)
-    return
   }
-  verificationImc()
-  setImc(null)
-  setTextButton("Calcular")
-  setMessageImc("preencha o peso e altura")
-  
+  else{
+    verificationImc()
+    setImc(null)
+    setTextButton("Calcular")
+    setMessageImc("preencha o peso e altura")
+  }
 }
   return(
     <Pressable onPress={Keyboard.dismiss} style={styles.formContext}>
