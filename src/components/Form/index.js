@@ -1,5 +1,11 @@
 import React, {useState} from "react";
-import {View, TextInput, Text, TouchableOpacity} from 'react-native';
+import {
+  View, 
+  TextInput, 
+  Text, 
+  TouchableOpacity,
+  Vibration,
+} from 'react-native';
 import ResultImc from "./ResultImc";
 import styles from "./style";
 
@@ -19,6 +25,7 @@ function imcCalculator(){
 
 function verificationImc(){
   if(imc == null){
+    Vibration.vibrate();
     setErrorMessage("*campo obrigatório*")
   }
 }
