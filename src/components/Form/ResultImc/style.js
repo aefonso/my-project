@@ -4,8 +4,8 @@ const styles = StyleSheet.create({
   contextImc: {
    flex: 1,
    marginTop: 15,
-   paddingTop:20,
-   borderRadius:50,
+   paddingTop: 20,
+   borderRadius: 50,
    alignItems: "center",
    width: "100%",
   },
@@ -22,13 +22,13 @@ const styles = StyleSheet.create({
   boxShareButton: {
     width: "100%",
     alignItems: "center",
-    marginBottom:10,
+    marginBottom: 10,
   },
   share: {
     backgroundColor: "#1b77f2",
     borderRadius: 50,
     paddingTop: 5,
-    paddingBottom:5, 
+    paddingBottom: 5, 
   },
   sharedText: {
     color: "#ffffff",
